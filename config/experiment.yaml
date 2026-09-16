@@ -1,0 +1,41 @@
+# 参数是实验起点，不是精度保证。采样开始后更改会要求新建一轮。
+robot_id: 306
+# 306 D435i只读查询的原始Z16单位；2026-09-15核对为0.001m。
+# 仅深度选点模式按需读取已对齐的深度，不改原RGB标定参数。
+depth_scale_m: 0.001
+dictionary: DICT_6X6_250
+marker_id: -1
+marker_size_mm: 57.0
+board_size_mm: [75.0, 75.0]
+arm: left
+# 6x6码加黑边共8格；48像素约为每格6像素，仍需通过角点质量检测。
+minimum_marker_pixels: 48.0
+maximum_reprojection_px: 1.0
+maximum_feedback_age_sec: 0.3
+stationary_window_sec: 0.8
+stationary_range_deg: 0.35
+fixed_head_body_tolerance_deg: 0.5
+fixed_gripper_tolerance_deg: 1.0
+minimum_training_samples: 18
+minimum_validation_samples: 6
+calibration_gripper_deg: 240.0
+auto_speed_scale: 0.65
+auto_reset_speed_scale: 0.45
+# 手臂每次最多向前3°（头颈仍2°），每0.5°检查短段视野，等待新图像再继续。
+# 初始复位、头颈与夹爪速度不变；仅加快自动采集手臂移动。
+auto_visual_horizon_deg: 3.0
+auto_view_margin_px: 48.0
+# 安全边距以640×480为参考，程序按当前原生图像尺寸缩放。
+auto_wrist_span_min_deg: 18.0
+board_envelope_radius_m: 0.14
+validation_position_mm: 10.0
+validation_angle_deg: 2.0
+# 此处固定为URDF原始角度，不静默叠加旧抓取包的 [0,-1,4]。
+head_offsets_deg: [0.0, 0.0, 0.0]
+urdf_path: /home/ubuntu/miniconda3/envs/robot_env/lib/python3.12/site-packages/autolife_robot_sdk/descriptions/autolife_s1/urdfs/robot_v2_2.urdf
+vendor_python_path: /home/ubuntu/miniconda3/envs/robot_env/lib/python3.12/site-packages
+# 核对自当前VR V4 controller.yaml与导航launch；只复位双臂和头部。
+initial_pose_deg:
+  left_arm: [0.0, 0.0, 0.0, 110.0, 0.0, 13.0, 0.0]
+  right_arm: [0.0, 0.0, 0.0, -110.0, 0.0, -13.0, 0.0]
+  neck: [0.0, -20.0, 0.0]

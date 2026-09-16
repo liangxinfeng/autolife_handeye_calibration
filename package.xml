@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>autolife_handeye_calibration_306</name><version>0.2.0</version>
+  <description>Guided stationary-capture hand-eye calibration for robot 306.</description>
+  <maintainer email="robot@example.invalid">Robot development team</maintainer><license>Apache-2.0</license>
+  <buildtool_depend>ament_python</buildtool_depend>
+  <exec_depend>rclpy</exec_depend><exec_depend>std_msgs</exec_depend><exec_depend>std_srvs</exec_depend>
+  <exec_depend>control_center_joint_control</exec_depend><exec_depend>ament_index_python</exec_depend>
+  <exec_depend>openarmx_teleop_vr_306_v4</exec_depend>
+  <exec_depend>python3-pyqt5</exec_depend><exec_depend>python3-opencv</exec_depend>
+  <exec_depend>python3-scipy</exec_depend><exec_depend>python3-yaml</exec_depend>
+  <exec_depend>python3-opengl</exec_depend>
+  <export><build_type>ament_python</build_type></export>
+</package>
