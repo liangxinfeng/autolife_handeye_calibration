@@ -258,7 +258,7 @@ class Window(Q.QMainWindow):
             # Full corner/pose quality remains mandatory for every saved sample.
             reason=sample_guard(q,q,'train',cfg,self.node.history,time.monotonic())
             if reason:raise ValueError(reason)
-            directory=Path.home()/'ros2_ws/src/autolife_handeye_calibration_306/sessions'/datetime.datetime.now().strftime('%Y%m%d_%H%M%S_%f')
+            directory=Path.home()/'ros2_ws/src/autolife_handeye_calibration_307/sessions'/datetime.datetime.now().strftime('%Y%m%d_%H%M%S_%f')
             self.stop(); self.set_session(Session(directory,cfg,q,self.fk.sha))
             self.start_status.setText('本轮已开始 · ID '+str(cfg['marker_id'])+' · 请按第1张提示采集')
         except Exception as exc:
@@ -268,11 +268,11 @@ class Window(Q.QMainWindow):
 
     def load_session(self):
         if self.busy or self.collect or self.automation.active:return
-        directory=Q.QFileDialog.getExistingDirectory(self,'选择包含session.json的实验目录',str(Path.home()/'ros2_ws/src/autolife_handeye_calibration_306/sessions'))
+        directory=Q.QFileDialog.getExistingDirectory(self,'选择包含session.json的实验目录',str(Path.home()/'ros2_ws/src/autolife_handeye_calibration_307/sessions'))
         if not directory:return
         try:
             s=Session.load(directory)
-            if s.data['urdf_sha256']!=self.fk.sha or s.data['config']['robot_id']!=306:raise ValueError('机器人或URDF与此实验不一致，不能继续混合采集')
+            if s.data['urdf_sha256']!=self.fk.sha or s.data['config']['robot_id']!=283:raise ValueError('机器人或URDF与此实验不一致，不能继续混合采集')
             self.stop(); self.set_session(s)
         except Exception as exc:self.message(str(exc))
 
@@ -385,7 +385,7 @@ class Window(Q.QMainWindow):
             self.session.data['report']=report
             self.session.data['fixed_solution']={'T_mount_camera':report['T_mount_camera']}
             self.session.save()
-            atomic_json(self.session.path/'calibration_candidate.json',{'robot_id':306,'urdf_sha256':self.fk.sha,
+            atomic_json(self.session.path/'calibration_candidate.json',{'robot_id':307,'urdf_sha256':self.fk.sha,
                 'config':self.cfg,'report':report,'applied_to_robot':False})
             self.message(report['status']); self.refresh_samples(); self.goto_page(2)
             if self.automation.active:self.automation.solved(report,None)
@@ -479,7 +479,7 @@ class Window(Q.QMainWindow):
 
 def main():
     rclpy.init(); app=Q.QApplication(sys.argv); app.setStyleSheet(STYLE)
-    share=Path(get_package_share_directory('autolife_handeye_calibration_306'))
+    share=Path(get_package_share_directory('autolife_handeye_calibration_307'))
     config=yaml.safe_load((share/'config/experiment.yaml').read_text())
     node=None
     try:

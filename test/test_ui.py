@@ -7,9 +7,9 @@ import numpy as np
 import pytest
 import yaml
 from PyQt5 import QtWidgets as Q
-from autolife_handeye_calibration_306.core import Session,NECK,BODY,ARMS
-from autolife_handeye_calibration_306.app import Window
-import autolife_handeye_calibration_306.app as module
+from autolife_handeye_calibration_307.core import Session,NECK,BODY,ARMS
+from autolife_handeye_calibration_307.app import Window
+import autolife_handeye_calibration_307.app as module
 
 ROOT=Path(__file__).resolve().parents[1]
 class FakeCamera:

@@ -130,7 +130,7 @@ class Automation:
         proc.readyReadStandardOutput.connect(self.read_output);proc.finished.connect(self.planned)
         proc.errorOccurred.connect(lambda *_:self.fail('离线轨迹检查进程无法运行') if self.state=='planning' else None)
         proc.started.connect(lambda:self.send_request(proc))
-        proc.start('/home/ubuntu/miniconda3/envs/robot_env/bin/python',['-m','autolife_handeye_calibration_306.auto_plan_worker'])
+        proc.start('/home/ubuntu/ros2_ws/venvs/openarmx_v4_placo/bin/python',['-m','autolife_handeye_calibration_307.auto_plan_worker'])
         self.w.message('正在检查返回初始姿态的路径…' if mode=='reset' else '初始姿态已就绪，正在根据当前画面安排视野内的采集路径…')
 
     def send_request(self,proc):
@@ -157,7 +157,7 @@ class Automation:
                 self.w.message('回程检查通过，自动回到初始姿态；请勿触碰机器人。');return
             self.vision=Visibility(self.cfg,self.observation,self.w.fk)
             steps=[{'phase':t['phase'],'hint':t['hint']} for t in self.plan['targets']]
-            directory=Path.home()/'ros2_ws/src/autolife_handeye_calibration_306/sessions'/datetime.datetime.now().strftime('%Y%m%d_%H%M%S_%f')
+            directory=Path.home()/'ros2_ws/src/autolife_handeye_calibration_307/sessions'/datetime.datetime.now().strftime('%Y%m%d_%H%M%S_%f')
             session=Session(directory,self.cfg,self.source,self.w.fk.sha,steps=steps)
             atomic_json(directory/'auto_plan.json',self.plan)
             self.w.set_session(session);self.controls(False)

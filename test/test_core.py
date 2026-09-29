@@ -6,7 +6,7 @@ import numpy as np
 import pytest
 import yaml
 from scipy.spatial.transform import Rotation as R
-from autolife_handeye_calibration_306.core import (matrix,compute_report,object_corners,pose_error,
+from autolife_handeye_calibration_307.core import (matrix,compute_report,object_corners,pose_error,
     Session,sample_guard,NECK,BODY,ARMS,detect)
 
 ROOT=Path(__file__).resolve().parents[1]

@@ -2,11 +2,11 @@
 import json
 from pathlib import Path
 import numpy as np
-from autolife_handeye_calibration_306.core import Kinematics
-from autolife_handeye_calibration_306.verification_core import load_geometry,tcp_position
-from autolife_handeye_calibration_306.verify_plan_worker import plan
+from autolife_handeye_calibration_307.core import Kinematics
+from autolife_handeye_calibration_307.verification_core import load_geometry,tcp_position
+from autolife_handeye_calibration_307.verify_plan_worker import plan
 
-p=Path('/home/ubuntu/ros2_ws/src/autolife_handeye_calibration_306/sessions/20260914_102651_586775/session.json')
+p=Path('/home/ubuntu/ros2_ws/src/autolife_handeye_calibration_307/sessions/20260914_102651_586775/session.json')
 d=json.loads(p.read_text());cfg=d['config'];fk=Kinematics(cfg['urdf_path']);tcp=load_geometry(d,fk)
 q=d['reference'];start=tcp_position(fk,cfg,q,tcp)
 request={'config':cfg,'q':q,'tcp':tcp.tolist(),'goal':(start+np.array([.02,0,0])).tolist(),'urdf_sha256':fk.sha}

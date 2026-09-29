@@ -1,0 +1,406 @@
+{
+  "robot": "307",
+  "source_package": "autolife_handeye_calibration_307",
+  "snapshot_date": "2026-09-29",
+  "files": [
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8813578d2081a154c713a5b59d9baa3e0836af93",
+      "size": 220
+    },
+    {
+      "path": "AUTO_CALIBRATION_VALIDATION.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7b8c23b46e3be371c760f974e4f503e0f95291cd",
+      "size": 7153
+    },
+    {
+      "path": "AUTO_HANDOFF_FIX_ZH.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2c2fd6b3672004959054f20b8656bd7b6393ad00",
+      "size": 1996
+    },
+    {
+      "path": "CAMERA_AB_TEST_ZH.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "685350827ab93c9d86dba3864ef1b5966c410365",
+      "size": 2482
+    },
+    {
+      "path": "DEPTH_VERIFICATION.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2d4653a581942eace61d38fd679c6be6aa95e867",
+      "size": 2121
+    },
+    {
+      "path": "HD_AUTO_CALIBRATION_ZH.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6fc96683b2215994ecfb7709bd6aabbab1f75aff",
+      "size": 2598
+    },
+    {
+      "path": "MIGRATION_ZH.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b08bf4bf01d1f847eafde5de7cd44fb5bcb03e9c",
+      "size": 907
+    },
+    {
+      "path": "README_ZH.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ddf9c3bcb7277ef8ea558e3c57ffb981bdb0930d",
+      "size": 11405
+    },
+    {
+      "path": "VERIFICATION_ZH.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "21fa59f0031bc9a3d4b33288a8bdaf2e3bd0fc7a",
+      "size": 5649
+    },
+    {
+      "path": "autolife_handeye_calibration_307/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0
+    },
+    {
+      "path": "autolife_handeye_calibration_307/app.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "982c333c37e070570d4d2213af26d7e9863871d9",
+      "size": 32663
+    },
+    {
+      "path": "autolife_handeye_calibration_307/auto_plan_worker.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "007faa81d58e8beeae45c78fcfc81c1c830e1e1b",
+      "size": 11643
+    },
+    {
+      "path": "autolife_handeye_calibration_307/automation.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f5260aab0d48b44ea544d0b2d0cf6a8a7022ab14",
+      "size": 21398
+    },
+    {
+      "path": "autolife_handeye_calibration_307/bridge.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1bc91c7bcf754e81112f0d14406fc6759a317c32",
+      "size": 5031
+    },
+    {
+      "path": "autolife_handeye_calibration_307/camera.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "112d6948db03d04f39c9c06bd3bfa5cf46326c03",
+      "size": 6517
+    },
+    {
+      "path": "autolife_handeye_calibration_307/core.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "758d112ef4772a511a2789ad7c1e782369bff321",
+      "size": 15855
+    },
+    {
+      "path": "autolife_handeye_calibration_307/depth_selection.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fd69085ee5b3e5b6b5c2faef6aa2e20e9172ca68",
+      "size": 4752
+    },
+    {
+      "path": "autolife_handeye_calibration_307/depth_target.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "977ca0595ba08d0300c6b85afa7e33d5650d38c3",
+      "size": 4411
+    },
+    {
+      "path": "autolife_handeye_calibration_307/model_view.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1169c2e8ffe4aeb00003dfd4ea696573dd52c6e1",
+      "size": 1647
+    },
+    {
+      "path": "autolife_handeye_calibration_307/verification.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "77df0af7cbea508678d70379cbbbff3cd6776fcb",
+      "size": 25353
+    },
+    {
+      "path": "autolife_handeye_calibration_307/verification_core.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2f507f728032b0e45259a403f884c5b17232fa1c",
+      "size": 6853
+    },
+    {
+      "path": "autolife_handeye_calibration_307/verification_trajectory.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c045a81f6065760b74ad8fdc0368773f4c3bb958",
+      "size": 4469
+    },
+    {
+      "path": "autolife_handeye_calibration_307/verify_plan_worker.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1cd2c134908c5f5c9e335d173eb9235ef51f4d10",
+      "size": 3280
+    },
+    {
+      "path": "autolife_handeye_calibration_307/visibility.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ba6ec1a3821f777ed3438605a963cc8196bef44d",
+      "size": 2788
+    },
+    {
+      "path": "autolife_handeye_calibration_307/workflow.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3a11b5c6ffb83c631c7a046126c254a34be99a4c",
+      "size": 11017
+    },
+    {
+      "path": "config/experiment.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7fa8a8c8169bb34e96f4af7f4bff5cbd0338b01e",
+      "size": 1845
+    },
+    {
+      "path": "launch/calibration.launch.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ab53494f93abd4bf0706f94de54212b8d9cd71d9",
+      "size": 1361
+    },
+    {
+      "path": "package.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1cab13f3e7765fd08e6a9d6f22acdbf0d1684534",
+      "size": 908
+    },
+    {
+      "path": "resource/autolife_handeye_calibration_307",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0
+    },
+    {
+      "path": "scripts/handeye306",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "177bafe753661e00f4cf5da93d4cc482cc25889c",
+      "size": 259
+    },
+    {
+      "path": "scripts/handeye307",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "177bafe753661e00f4cf5da93d4cc482cc25889c",
+      "size": 259
+    },
+    {
+      "path": "setup.cfg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5ff952918d9c7351e490a6e70f8c1754d323ab21",
+      "size": 133
+    },
+    {
+      "path": "setup.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7f7838c3caba26168cd9f34660499343a10eeff7",
+      "size": 564
+    },
+    {
+      "path": "test/actual_sixteen_session.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c56ca353a96b9b5f5df8d856a9c14e5becf6cb6c",
+      "size": 80723
+    },
+    {
+      "path": "test/capture_regression_20260910.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fb553df7f364e5f0c4af5b60fa1b4535f4c3ab3a",
+      "size": 13019
+    },
+    {
+      "path": "test/check_visible_transitions.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "83c518c540758222b5c36d2736162e0857a54d67",
+      "size": 2007
+    },
+    {
+      "path": "test/diagnose_live.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5192aa1260d6715fa90ecdd9fdb9482338e8fe8c",
+      "size": 1825
+    },
+    {
+      "path": "test/diagnose_view_plan.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8ac402381e4ed224430706f5a2818cba8bc34189",
+      "size": 4399
+    },
+    {
+      "path": "test/gripper_endpoints.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f5592a5ffe6fc992fcbe84400da7d862c17330e6",
+      "size": 1237
+    },
+    {
+      "path": "test/gripper_geometry.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fe37321a52723fc55975f753c20d5f6c1b5326f4",
+      "size": 1374
+    },
+    {
+      "path": "test/offline_verify_plan.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a45442a2cb1ff560874eac9f4254965dcbe9702a",
+      "size": 1785
+    },
+    {
+      "path": "test/render_verification.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6ef3ba213e19a268e187048611e35696abc37f6f",
+      "size": 1552
+    },
+    {
+      "path": "test/smoke_depth.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b831c8c35737c86f9dd70a544de9965486668639",
+      "size": 1518
+    },
+    {
+      "path": "test/smoke_ui.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e80fa99a3cdc715f3e82a32f98b164392a68994a",
+      "size": 2688
+    },
+    {
+      "path": "test/smoke_verification.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0e91f64e2f428f5bb6b67d4692515d004b283e95",
+      "size": 2043
+    },
+    {
+      "path": "test/test_automation.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3a499f80c369203edf507b2311c89409067e772f",
+      "size": 19689
+    },
+    {
+      "path": "test/test_command_path.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "93b8eca2b995fe565168419993381919acae6ca4",
+      "size": 3021
+    },
+    {
+      "path": "test/test_core.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4a7ccd7294d3c19cf5e172b2d7c6a4aa98abb1bb",
+      "size": 5109
+    },
+    {
+      "path": "test/test_depth_target.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "152bc08913e6fc1cc3ba99cd76be9b8e775c7d3a",
+      "size": 4078
+    },
+    {
+      "path": "test/test_hd_workflow.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "95173079104c0431d4dbcfb92d85776333782a7b",
+      "size": 696
+    },
+    {
+      "path": "test/test_small_marker.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "df41183cc0b9a688ab87569a426ccd30aeafd3b4",
+      "size": 916
+    },
+    {
+      "path": "test/test_ui.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "abfdd3e8a6bb00f8e1f05d718835d2b0869fa5d1",
+      "size": 8430
+    },
+    {
+      "path": "test/test_verification.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "abd87bd4d628dc298cd073b55c09852d9f0144e5",
+      "size": 7107
+    },
+    {
+      "path": "test/test_verification_comparison.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ff1a6fb0898b8a9bfec404d9d1799fc7d2ab8c39",
+      "size": 4718
+    },
+    {
+      "path": "test/test_verification_trajectory.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8a19903cad88987c482560dbfdb9d454c80fd54e",
+      "size": 2924
+    },
+    {
+      "path": "test/test_visibility.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "08a034cce01d32e67297061f0dea2c03680d51a3",
+      "size": 1284
+    },
+    {
+      "path": "test/view_plan_result.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7ecc8883334f9a33cedc12046bedb194e00c3af7",
+      "size": 180677
+    }
+  ]
+}

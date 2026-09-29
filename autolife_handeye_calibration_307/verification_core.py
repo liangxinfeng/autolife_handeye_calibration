@@ -48,7 +48,7 @@ def q_for_fk(q, cfg):
 
 
 def load_geometry(data, fk, offset_mm=15.):
-    if data['config']['robot_id'] != 306 or data['urdf_sha256'] != fk.sha:
+    if data['config']['robot_id'] != 283 or data['urdf_sha256'] != fk.sha:
         raise ValueError('实验机器人或URDF不匹配')
     report = data.get('report') or {}
     if not has_solution(report):
@@ -87,7 +87,7 @@ def observed_target(data, fk, q, frame, standoff_mm):
 def camera_transform(data, fk, q, frame):
     """Shared calibration/intrinsics gate for ArUco and aligned-depth targets."""
     cfg=data['config']
-    if cfg['robot_id']!=306 or data['urdf_sha256']!=fk.sha:
+    if cfg['robot_id']!=283 or data['urdf_sha256']!=fk.sha:
         raise ValueError('实验机器人或URDF不匹配')
     sample = next(iter(data['samples'].values()))
     if (list(frame['image'].shape) != sample['image_shape'] or

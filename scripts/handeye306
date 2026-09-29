@@ -3,4 +3,4 @@
 set -e
 source /opt/ros/jazzy/setup.bash
 source /home/ubuntu/ros2_ws/install/setup.bash
-exec ros2 launch autolife_handeye_calibration_306 calibration.launch.py "$@"
+exec ros2 launch autolife_handeye_calibration_307 calibration.launch.py "$@"

@@ -31,7 +31,7 @@
 
 以下为首版历史记录。
 
-安装位置：306 `/home/ubuntu/ros2_ws/src/autolife_handeye_calibration_306`；入口 `~/handeye306`。
+安装位置：306 `/home/ubuntu/ros2_ws/src/autolife_handeye_calibration_307`；入口 `~/handeye306`。
 
 ## 实测输入
 

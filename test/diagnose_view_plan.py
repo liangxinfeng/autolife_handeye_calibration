@@ -6,11 +6,11 @@ import time
 import yaml
 import pyrealsense2 as rs
 import numpy as np
-from autolife_handeye_calibration_306.auto_plan_worker import plan
-from autolife_handeye_calibration_306.auto_plan_worker import CollisionGuard
+from autolife_handeye_calibration_307.auto_plan_worker import plan
+from autolife_handeye_calibration_307.auto_plan_worker import CollisionGuard
 import hppfcl as fcl
-from autolife_handeye_calibration_306.visibility import Visibility
-from autolife_handeye_calibration_306.core import compute_report
+from autolife_handeye_calibration_307.visibility import Visibility
+from autolife_handeye_calibration_307.core import compute_report
 
 root=Path(__file__).resolve().parents[1]
 s=json.loads(Path(sys.argv[1]).read_text())

@@ -130,7 +130,7 @@ class Verification:
     def load(self):
         if self.active:return
         try:
-            root=Path.home()/'ros2_ws/src/autolife_handeye_calibration_306/sessions'
+            root=Path.home()/'ros2_ws/src/autolife_handeye_calibration_307/sessions'
             if self.w.session and self.w.session.data.get('report'):
                 s=self.w.session
             else:
@@ -187,7 +187,7 @@ class Verification:
             proc.readyReadStandardOutput.connect(self.read_output); proc.finished.connect(self.planned)
             proc.errorOccurred.connect(lambda *_:self.fail('规划进程未能启动') if self.state=='planning' else None)
             proc.started.connect(lambda:self.send_request(proc))
-            proc.start('/home/ubuntu/miniconda3/envs/robot_env/bin/python', ['-m','autolife_handeye_calibration_306.verify_plan_worker'])
+            proc.start('/home/ubuntu/ros2_ws/venvs/openarmx_v4_placo/bin/python', ['-m','autolife_handeye_calibration_307.verify_plan_worker'])
             self.say('已锁定目标，正在计算位置IK和局部自碰撞检查；没有发送运动命令。')
         except Exception as exc:self.say('未开始规划：'+str(exc))
 

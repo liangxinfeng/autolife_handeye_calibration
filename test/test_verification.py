@@ -5,8 +5,8 @@ import numpy as np
 import pytest
 from scipy.spatial.transform import Rotation
 from test_ui import win
-from autolife_handeye_calibration_306.core import ARMS, NECK, matrix
-from autolife_handeye_calibration_306.verification_core import (
+from autolife_handeye_calibration_307.core import ARMS, NECK, matrix
+from autolife_handeye_calibration_307.verification_core import (
     load_geometry, tcp_position, checked_observation, check_path_state)
 
 
@@ -74,7 +74,7 @@ def test_any_stationary_gripper_opening_allowed(win,monkeypatch,opening):
     now=time.monotonic();win.node._feedback_monotonic=now
     win.node.history=[(now,q)]
     win.camera.frame['received']=now;win.camera.frame['detection']['C'][2][3]=.6
-    monkeypatch.setattr('autolife_handeye_calibration_306.verification.sample_guard',lambda *_:'')
+    monkeypatch.setattr('autolife_handeye_calibration_307.verification.sample_guard',lambda *_:'')
     actual,target,goal=v.snapshot(win.camera.frame,True)
     assert actual['Joint_Right_Gripper']==opening and not win.node.sent
     assert np.isfinite(target).all() and np.isfinite(goal).all()
@@ -93,7 +93,7 @@ def test_execution_ignores_rgb_loss_but_feedback_loss_stops(win,monkeypatch,tmp_
     v.plan={'waypoints':[q,end],'execution':'continuous_joint_path_v1','end_q':end,'tcp':[.2,0,0],'goal':[0,0,0]}
     v.state='moving';v.source=q;v.index=0;v.edge=None;v.marker_id=0
     v.started=time.monotonic();v.target=np.eye(4);v.run_path=tmp_path/'run'
-    from autolife_handeye_calibration_306.verification_trajectory import JointPath,PathFollower
+    from autolife_handeye_calibration_307.verification_trajectory import JointPath,PathFollower
     v.follower=PathFollower(JointPath(ARMS['right'],[q,end]),time.monotonic()-.1);v.settled_since=None
     monkeypatch.setattr(v,'snapshot',lambda *_:(q,np.eye(4),np.zeros(3)))
     def apply(group,values,speed_scale):
@@ -120,7 +120,7 @@ def test_execution_ignores_rgb_loss_but_feedback_loss_stops(win,monkeypatch,tmp_
 
 def test_completion_without_rgb_saves_result(win,monkeypatch,tmp_path):
     import json
-    from autolife_handeye_calibration_306.verification_trajectory import JointPath,PathFollower
+    from autolife_handeye_calibration_307.verification_trajectory import JointPath,PathFollower
     v=win.verification;v.data=data_for(win);win.pages.setCurrentIndex(3)
     q=dict(win.node._current);names=ARMS['right'];v.source=q
     v.plan={'waypoints':[q,q],'execution':'continuous_joint_path_v1','end_q':q,'tcp':[.2,0,0],'goal':[0,0,0]}

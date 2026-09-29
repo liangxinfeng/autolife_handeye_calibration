@@ -1,6 +1,6 @@
 import numpy as np
 import pytest
-from autolife_handeye_calibration_306.verification_trajectory import JointPath,PathFollower
+from autolife_handeye_calibration_307.verification_trajectory import JointPath,PathFollower
 
 
 def path():return JointPath(['a','b'],[{'a':0,'b':0},{'a':3,'b':2},{'a':6,'b':4},{'a':10,'b':6}])

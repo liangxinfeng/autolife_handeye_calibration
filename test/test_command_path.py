@@ -5,7 +5,7 @@ import json
 import time
 from types import SimpleNamespace as NS
 import pytest
-from autolife_handeye_calibration_306.bridge import CalibrationBridge
+from autolife_handeye_calibration_307.bridge import CalibrationBridge
 from control_center_joint_control.joint_definitions import GROUPS
 
 @pytest.fixture

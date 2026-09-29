@@ -7,8 +7,8 @@ from pathlib import Path
 import yaml
 import rclpy
 from PyQt5 import QtCore, QtWidgets
-from autolife_handeye_calibration_306.app import Window, STYLE
-from autolife_handeye_calibration_306.bridge import CalibrationBridge
+from autolife_handeye_calibration_307.app import Window, STYLE
+from autolife_handeye_calibration_307.bridge import CalibrationBridge
 
 root=Path(__file__).resolve().parents[1]
 os.environ['ROS_DOMAIN_ID']='0'

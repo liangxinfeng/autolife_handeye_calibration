@@ -13,7 +13,7 @@ def button(layout, text, fn):
 def build(w):
     w.setWindowTitle('云蝶 · 手眼标定'); w.resize(1500,940)
     root=Q.QWidget(); w.setCentralWidget(root); main=Q.QVBoxLayout(root)
-    header=Q.QHBoxLayout(); title=Q.QLabel('306  手眼标定'); title.setStyleSheet('font-size:24px;font-weight:bold')
+    header=Q.QHBoxLayout(); title=Q.QLabel('300  手眼标定'); title.setStyleSheet('font-size:24px;font-weight:bold')
     header.addWidget(title); header.addStretch()
     for i,text in enumerate(('① 准备','② 调姿与采集','③ 评估与重拍','④ 精度验证')):
         button(header,text,lambda _,n=i:w.goto_page(n))

@@ -8,8 +8,8 @@ from types import SimpleNamespace as NS
 import pytest
 from test_core import dataset
 from test_ui import win,batch
-from autolife_handeye_calibration_306.core import compute_report,ARMS,has_solution
-from autolife_handeye_calibration_306.automation import edge_error
+from autolife_handeye_calibration_307.core import compute_report,ARMS,has_solution
+from autolife_handeye_calibration_307.automation import edge_error
 
 
 def test_twenty_samples_independent_validation():

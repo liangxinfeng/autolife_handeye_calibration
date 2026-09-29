@@ -14,9 +14,9 @@ def generate_launch_description():
             '<NetworkInterface name="lo"/></Interfaces></General><Discovery>'
             '<ParticipantIndex>auto</ParticipantIndex><MaxAutoParticipantIndex>200</MaxAutoParticipantIndex>'
             '</Discovery></Domain></CycloneDDS>'),
-        Node(package='autolife_handeye_calibration_306', executable='calibration_app',
-             parameters=[{'goal_tolerance_deg':0.3, 'gripper_goal_tolerance_deg':1.0,
+        Node(package='autolife_handeye_calibration_307', executable='calibration_app',
+             parameters=[{'robot_id':307, 'goal_tolerance_deg':0.3, 'gripper_goal_tolerance_deg':1.0,
                           'command_update_rate_hz':10.0, 'max_single_step_deg':5.0,
                           'max_gripper_command_lead_deg':30.0}],
-             output='screen', remappings=[(prefix+n, '/handeye306/'+n) for n in names]),
+             output='screen', remappings=[(prefix+n, '/handeye307/'+n) for n in names]),
     ])

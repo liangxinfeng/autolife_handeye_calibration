@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# 只启动标定界面；不使能、不复位、不重启硬件服务。
+set -e
+source /opt/ros/jazzy/setup.bash
+source /home/ubuntu/ros2_ws/install/setup.bash
+exec ros2 launch autolife_handeye_calibration_307 calibration.launch.py "$@"

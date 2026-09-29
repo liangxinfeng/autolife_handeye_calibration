@@ -6,7 +6,7 @@ os.environ.update(ROS_DOMAIN_ID='0',RMW_IMPLEMENTATION='rmw_cyclonedds_cpp',
 import rclpy
 from rcl_interfaces.srv import GetParameters
 from std_msgs.msg import String
-from autolife_handeye_calibration_306.camera import Camera
+from autolife_handeye_calibration_307.camera import Camera
 rclpy.init();node=rclpy.create_node('handeye_readonly_diagnosis');result={};futures={}
 def feedback(m):
     d=json.loads(m.data)

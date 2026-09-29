@@ -8,12 +8,12 @@ import numpy as np
 import pytest
 from PyQt5 import QtWidgets as Q
 from test_ui import win
-from autolife_handeye_calibration_306.core import Session
-from autolife_handeye_calibration_306.app import STYLE
+from autolife_handeye_calibration_307.core import Session
+from autolife_handeye_calibration_307.app import STYLE
 
 with tempfile.TemporaryDirectory(prefix='verify_ui_') as tmp:
     monkey=pytest.MonkeyPatch(); it=win.__wrapped__(Path(tmp),monkey); w=next(it)
-    s=Session.load('/home/ubuntu/ros2_ws/src/autolife_handeye_calibration_306/sessions/20260914_102651_586775')
+    s=Session.load('/home/ubuntu/ros2_ws/src/autolife_handeye_calibration_307/sessions/20260914_102651_586775')
     w.session=s;w.node._current=dict(s.data['reference']);w.goto_page(3)
     sample=s.data['samples']['0'];f=w.camera.frame
     f.update(image=cv2.imread(str(s.path/sample['image'])),K=np.array(sample['K']),D=np.array(sample['D']),

@@ -10,13 +10,13 @@ import yaml
 import rclpy
 from PyQt5 import QtCore,QtWidgets as Q
 from ament_index_python.packages import get_package_share_directory
-from autolife_handeye_calibration_306.app import Window,STYLE
-from autolife_handeye_calibration_306.bridge import CalibrationBridge
-import autolife_handeye_calibration_306.verification as mod
+from autolife_handeye_calibration_307.app import Window,STYLE
+from autolife_handeye_calibration_307.bridge import CalibrationBridge
+import autolife_handeye_calibration_307.verification as mod
 
 rclpy.init();app=Q.QApplication([]);app.setStyleSheet(STYLE)
 node=CalibrationBridge()
-share=Path(get_package_share_directory('autolife_handeye_calibration_306'))
+share=Path(get_package_share_directory('autolife_handeye_calibration_307'))
 w=Window(node,yaml.safe_load((share/'config/experiment.yaml').read_text()))
 w.goto_page(3);w.verification.mode.setCurrentIndex(1);w.show();result={}
 def done():

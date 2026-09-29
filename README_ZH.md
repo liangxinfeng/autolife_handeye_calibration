@@ -1,7 +1,7 @@
 # 306手眼标定：自动采集与手动补拍
 
 306一条指令运行：`~/handeye306`。
-标准ROS入口：`ros2 launch autolife_handeye_calibration_306 calibration.launch.py`。
+标准ROS入口：`ros2 launch autolife_handeye_calibration_307 calibration.launch.py`。
 首次终端需要：`source /opt/ros/jazzy/setup.bash && source /home/ubuntu/ros2_ws/install/setup.bash`。
 
 新增 **④ 精度验证**：读取本轮/最新外参，显示桌面ArUco位姿，按原板内法线15mm建立夹取中心，先规划再由用户确认运动。不控制夹爪开合；默认预留30mm，完整说明见 [VERIFICATION_ZH.md](VERIFICATION_ZH.md)。仅自碰撞预检，不包含桌面/盒子外部避障；测试结果不等于自动通过精度验收。
@@ -56,7 +56,7 @@
 
 ## 保存与评估
 
-数据默认放在`/home/ubuntu/ros2_ws/src/autolife_handeye_calibration_306/sessions/时间/`，包括原始PNG、session.json、calibration_candidate.json。记录K/D、真实关节/FK、接收时间来源、图像帧号、角点及替换历史。
+数据默认放在`/home/ubuntu/ros2_ws/src/autolife_handeye_calibration_307/sessions/时间/`，包括原始PNG、session.json、calibration_candidate.json。记录K/D、真实关节/FK、接收时间来源、图像帧号、角点及替换历史。
 
 候选结果采用`T_A_B`把B坐标变换到A，平移单位m；同时输出躯干到相机、头部安装坐标到相机、腕端到标定板的变换。不会自动应用到机器人、不会把未通过验证的结果伪装成成功。
 

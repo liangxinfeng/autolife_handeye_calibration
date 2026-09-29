@@ -5,10 +5,10 @@ import numpy as np
 import pytest
 from test_ui import win
 from test_verification import data_for
-from autolife_handeye_calibration_306.core import TORSO,MOUNT,NECK
-from autolife_handeye_calibration_306.verification_core import (
+from autolife_handeye_calibration_307.core import TORSO,MOUNT,NECK
+from autolife_handeye_calibration_307.verification_core import (
     camera_geometry,camera_transform,load_geometry,observed_target)
-from autolife_handeye_calibration_306.depth_target import torso_point
+from autolife_handeye_calibration_307.depth_target import torso_point
 
 
 def load_pair(w):

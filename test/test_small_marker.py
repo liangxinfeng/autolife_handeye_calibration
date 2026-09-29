@@ -2,7 +2,7 @@
 import copy
 import numpy as np
 from test_ui import win
-from autolife_handeye_calibration_306.core import detect
+from autolife_handeye_calibration_307.core import detect
 
 
 def test_verification_size_is_separate_and_restored_on_leave(win):

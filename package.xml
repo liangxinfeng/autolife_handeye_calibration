@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <package format="3">
-  <name>autolife_handeye_calibration_306</name><version>0.2.0</version>
+  <name>autolife_handeye_calibration_307</name><version>0.2.0</version>
   <description>Guided stationary-capture hand-eye calibration for robot 306.</description>
   <maintainer email="robot@example.invalid">Robot development team</maintainer><license>Apache-2.0</license>
   <buildtool_depend>ament_python</buildtool_depend>
